@@ -12,7 +12,7 @@ public class SeatingController {
 	@Autowired
 	private SeatingService seatingService;
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+//	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/getPassengerArrangement")
 	public int[][] getPassengerArrangement(@RequestBody Aeroplane aero) {
 		return seatingService.getPassengerArrangement(aero) ;
