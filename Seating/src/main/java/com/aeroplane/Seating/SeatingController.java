@@ -2,6 +2,7 @@ package com.aeroplane.Seating;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,5 +17,10 @@ public class SeatingController {
 	@PostMapping("/getPassengerArrangement")
 	public int[][] getPassengerArrangement(@RequestBody Aeroplane aero) {
 		return seatingService.getPassengerArrangement(aero) ;
+	}
+	
+	@GetMapping("/check")
+	public String AwsTest() {
+		return "Working";
 	}
 }
